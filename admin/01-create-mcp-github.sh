@@ -15,6 +15,13 @@ if ! [[ "$NUM_USERS" =~ ^[1-9][0-9]*$ ]]; then
     exit 1
 fi
 
+# Check if GITHUB_PAT is exported
+if [ -z "${GITHUB_PAT}" ]; then
+    echo "Error: GITHUB_PAT environment variable is not set"
+    echo "Please export GITHUB_PAT before running this script"
+    exit 1
+fi
+
 echo "Applying mcp-github.yaml to namespaces user1-llama-stack to user${NUM_USERS}"
 echo "=================================================================="
 echo
