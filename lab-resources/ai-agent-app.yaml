@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: ai-agent
-  namespace: ${NAMESPACE}
+  namespace: user26-ai-agent
 spec:
   project: default
   source:
@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: ${NAMESPACE}
+    namespace: user26-ai-agent
   syncPolicy:
     automated:
       prune: true
