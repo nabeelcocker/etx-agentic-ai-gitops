@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     path: agent/chart
-    repoURL: ${GITHUB_REPO}
+    repoURL: https://github.com/nabeelcocker/etx-agentic-ai-gitops
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
